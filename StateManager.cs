@@ -105,7 +105,7 @@ namespace YasuoBuddy
         public static void Flee()
         {
              var bc = (Player.Instance.Mana);
-            Chat.Print(bc);
+            Chat.Print(bc + Player.Instance.Champion.Name);
             var unit = DashingManager.GetClosestEUnit(Game.CursorPos);
             if (Yasuo.FleeMenu["Flee.E"].Cast<CheckBox>().CurrentValue && unit != null && unit.GetDashPos().Distance(Game.CursorPos) < Player.Instance.Distance(Game.CursorPos))
             {
